@@ -3,39 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		251712162CBE64B2005AB9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251712112CBE64B2005AB9E5 /* Main.storyboard */; };
+		251712172CBE64B2005AB9E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2517120F2CBE64B2005AB9E5 /* LaunchScreen.storyboard */; };
+		251712182CBE64B2005AB9E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251712132CBE64B2005AB9E5 /* Info.plist */; };
+		251712192CBE64B2005AB9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2517120D2CBE64B2005AB9E5 /* Assets.xcassets */; };
+		2517121A2CBE64B2005AB9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */; };
+		2517121B2CBE64B2005AB9E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251712152CBE64B2005AB9E5 /* ViewController.swift */; };
+		2517121C2CBE64B2005AB9E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251712142CBE64B2005AB9E5 /* SceneDelegate.swift */; };
+		2BCCE5516A315AE3B527AB03 /* Pods_LoginTamplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		251711F42CBE6117005AB9E5 /* LoginTamplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTamplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2517120D2CBE64B2005AB9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2517120E2CBE64B2005AB9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		251712102CBE64B2005AB9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		251712132CBE64B2005AB9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251712142CBE64B2005AB9E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		251712152CBE64B2005AB9E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.debug.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.debug.xcconfig"; sourceTree = "<group>"; };
+		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		251712062CBE6118005AB9E5 /* Exceptions for "LoginTamplate" folder in "LoginTamplate" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 251711F32CBE6117005AB9E5 /* LoginTamplate */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		251711F62CBE6117005AB9E5 /* LoginTamplate */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				251712062CBE6118005AB9E5 /* Exceptions for "LoginTamplate" folder in "LoginTamplate" target */,
-			);
-			path = LoginTamplate;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		251711F12CBE6117005AB9E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCCE5516A315AE3B527AB03 /* Pods_LoginTamplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +48,8 @@
 			children = (
 				251711F62CBE6117005AB9E5 /* LoginTamplate */,
 				251711F52CBE6117005AB9E5 /* Products */,
+				4E8B6BD186E07CABABC681B3 /* Pods */,
+				F909E14A6F3606EC03D1612C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +61,45 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		251711F62CBE6117005AB9E5 /* LoginTamplate */ = {
+			isa = PBXGroup;
+			children = (
+				2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */,
+				2517120D2CBE64B2005AB9E5 /* Assets.xcassets */,
+				251712122CBE64B2005AB9E5 /* Base.lproj */,
+				251712132CBE64B2005AB9E5 /* Info.plist */,
+				251712142CBE64B2005AB9E5 /* SceneDelegate.swift */,
+				251712152CBE64B2005AB9E5 /* ViewController.swift */,
+			);
+			path = LoginTamplate;
+			sourceTree = "<group>";
+		};
+		251712122CBE64B2005AB9E5 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2517120F2CBE64B2005AB9E5 /* LaunchScreen.storyboard */,
+				251712112CBE64B2005AB9E5 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		4E8B6BD186E07CABABC681B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */,
+				A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F909E14A6F3606EC03D1612C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,20 +107,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 251712072CBE6118005AB9E5 /* Build configuration list for PBXNativeTarget "LoginTamplate" */;
 			buildPhases = (
+				FD6891FFE4C8F30A1D068402 /* [CP] Check Pods Manifest.lock */,
 				251711F02CBE6117005AB9E5 /* Sources */,
 				251711F12CBE6117005AB9E5 /* Frameworks */,
 				251711F22CBE6117005AB9E5 /* Resources */,
+				3C20FB537D34F3A91EDEAA60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				251711F62CBE6117005AB9E5 /* LoginTamplate */,
-			);
 			name = LoginTamplate;
-			packageProductDependencies = (
-			);
 			productName = LoginTamplate;
 			productReference = 251711F42CBE6117005AB9E5 /* LoginTamplate.app */;
 			productType = "com.apple.product-type.application";
@@ -95,10 +134,12 @@
 				TargetAttributes = {
 					251711F32CBE6117005AB9E5 = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
 			buildConfigurationList = 251711EF2CBE6117005AB9E5 /* Build configuration list for PBXProject "LoginTamplate" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,7 +148,6 @@
 			);
 			mainGroup = 251711EB2CBE6117005AB9E5;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 251711F52CBE6117005AB9E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,27 +162,97 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251712162CBE64B2005AB9E5 /* Main.storyboard in Resources */,
+				251712172CBE64B2005AB9E5 /* LaunchScreen.storyboard in Resources */,
+				251712182CBE64B2005AB9E5 /* Info.plist in Resources */,
+				251712192CBE64B2005AB9E5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C20FB537D34F3A91EDEAA60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6891FFE4C8F30A1D068402 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginTamplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		251711F02CBE6117005AB9E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2517121A2CBE64B2005AB9E5 /* AppDelegate.swift in Sources */,
+				2517121B2CBE64B2005AB9E5 /* ViewController.swift in Sources */,
+				2517121C2CBE64B2005AB9E5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2517120F2CBE64B2005AB9E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2517120E2CBE64B2005AB9E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		251712112CBE64B2005AB9E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				251712102CBE64B2005AB9E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		251712082CBE6118005AB9E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 289G429944;
@@ -161,6 +271,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.LoginTamplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -168,9 +279,11 @@
 		};
 		251712092CBE6118005AB9E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 289G429944;
