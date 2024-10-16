@@ -8,5 +8,6 @@ target 'LoginTamplate' do
   # Pods for LoginTamplate
   
   pod 'FlexLayout'
+  pod 'PinLayout'
 
 end

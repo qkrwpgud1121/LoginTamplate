@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250E4F902CBFA3B900CDCC71 /* LoginFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E4F8F2CBFA3B900CDCC71 /* LoginFlexView.swift */; };
 		251712162CBE64B2005AB9E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251712112CBE64B2005AB9E5 /* Main.storyboard */; };
 		251712172CBE64B2005AB9E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2517120F2CBE64B2005AB9E5 /* LaunchScreen.storyboard */; };
-		251712182CBE64B2005AB9E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251712132CBE64B2005AB9E5 /* Info.plist */; };
 		251712192CBE64B2005AB9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2517120D2CBE64B2005AB9E5 /* Assets.xcassets */; };
 		2517121A2CBE64B2005AB9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */; };
 		2517121B2CBE64B2005AB9E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251712152CBE64B2005AB9E5 /* ViewController.swift */; };
 		2517121C2CBE64B2005AB9E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251712142CBE64B2005AB9E5 /* SceneDelegate.swift */; };
+		2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517121D2CBE65F9005AB9E5 /* LoginVC.swift */; };
 		2BCCE5516A315AE3B527AB03 /* Pods_LoginTamplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250E4F8F2CBFA3B900CDCC71 /* LoginFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlexView.swift; sourceTree = "<group>"; };
 		251711F42CBE6117005AB9E5 /* LoginTamplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTamplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2517120D2CBE64B2005AB9E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +28,7 @@
 		251712132CBE64B2005AB9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		251712142CBE64B2005AB9E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		251712152CBE64B2005AB9E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2517121D2CBE65F9005AB9E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.debug.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				251712132CBE64B2005AB9E5 /* Info.plist */,
 				251712142CBE64B2005AB9E5 /* SceneDelegate.swift */,
 				251712152CBE64B2005AB9E5 /* ViewController.swift */,
+				2517121D2CBE65F9005AB9E5 /* LoginVC.swift */,
+				250E4F8F2CBFA3B900CDCC71 /* LoginFlexView.swift */,
 			);
 			path = LoginTamplate;
 			sourceTree = "<group>";
@@ -164,7 +169,6 @@
 			files = (
 				251712162CBE64B2005AB9E5 /* Main.storyboard in Resources */,
 				251712172CBE64B2005AB9E5 /* LaunchScreen.storyboard in Resources */,
-				251712182CBE64B2005AB9E5 /* Info.plist in Resources */,
 				251712192CBE64B2005AB9E5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +224,8 @@
 			files = (
 				2517121A2CBE64B2005AB9E5 /* AppDelegate.swift in Sources */,
 				2517121B2CBE64B2005AB9E5 /* ViewController.swift in Sources */,
+				2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */,
+				250E4F902CBFA3B900CDCC71 /* LoginFlexView.swift in Sources */,
 				2517121C2CBE64B2005AB9E5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +262,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 289G429944;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoginTamplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -287,6 +294,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 289G429944;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoginTamplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -344,7 +352,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -407,7 +415,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
