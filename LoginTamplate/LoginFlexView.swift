@@ -13,34 +13,94 @@ class LoginFlexView: UIView {
     
     fileprivate let rootFlexContainer = UIView()
     
-    let plusButton = UIButton(configuration: .filled())
-    let subtractButton = UIButton(configuration: .filled())
-    let count = UILabel()
-    let footer = UILabel()
+    private let id: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 19)
+        return textField
+    }()
+    
+    private let password: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 19)
+        return textField
+    }()
+    
+    private let loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Login", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.backgroundColor = .blue
+        return button
+    }()
+    
+    private let orLabel: UILabel = {
+        let label = UILabel()
+        label.text = "or"
+        label.font = UIFont.systemFont(ofSize: 19)
+        return label
+    }()
+    
+    private let sectorLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .lightGray
+        return label
+    }()
+    
+    private let googleSignInButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Sign in with Google", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.backgroundColor = .white
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.blue.cgColor
+        button.layer.cornerRadius = 22
+        return button
+    }()
+    
+    private let appleSignInButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(" Sign in with Apple", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.backgroundColor = .black
+        button.setImage(UIImage(systemName: "applelogo"), for: .normal)
+        button.tintColor = .white
+        button.layer.cornerRadius = 22
+        return button
+    }()
+    
+    private let kakaoSignInButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Sign in with Kakao", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.backgroundColor = .kakao
+        button.layer.cornerRadius = 22
+        return button
+    }()
     
     init() {
         super.init(frame: .zero)
         backgroundColor = .white
         
-        plusButton.setTitle("+", for: .normal)
-        subtractButton.setTitle("-", for: .normal)
+        id.placeholder = "Enter your id"
+        password.placeholder = "Enter your password"
         
-        count.textAlignment = .center
-        count.font = UIFont.systemFont(ofSize: 60.0)
-        
-        footer.text = "flexLayout test"
-        
-        rootFlexContainer.flex.width(100%).direction(.column).padding(12).define { flex in
+        rootFlexContainer.flex.direction(.column).padding(16).define { flex in
             
-            flex.addItem().direction(.row).justifyContent(.spaceBetween).define { row in
-                row.addItem(plusButton).grow(1).marginRight(10)
-                row.addItem(subtractButton).grow(1)
-            }
+            flex.addItem(id).height(44)
+            flex.addItem(password).marginTop(16).height(44)
+            flex.addItem(loginButton).marginTop(16).height(44)
             
-            flex.addItem(count)
+            flex.addItem(orLabel).alignSelf(.center).margin(8).height(20)
             
-            flex.addItem().height(1).marginTop(12).backgroundColor(.lightGray)
-            flex.addItem(footer).alignSelf(.center).marginTop(12)
+            flex.addItem(googleSignInButton).marginTop(16).height(44)
+            flex.addItem(appleSignInButton).marginTop(16).height(44)
+            flex.addItem(kakaoSignInButton).marginTop(16).height(44)
+            
+            
         }
         
         addSubview(rootFlexContainer)

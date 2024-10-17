@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,12 +31,6 @@
 		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		25DCF6382CBFB337009FE363 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
-		25DCF6392CBFB33F009FE363 /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
-		25DCF63A2CBFB346009FE363 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		251711F12CBE6117005AB9E5 /* Frameworks */ = {
@@ -71,9 +65,6 @@
 		251711F62CBE6117005AB9E5 /* LoginTamplate */ = {
 			isa = PBXGroup;
 			children = (
-				25DCF63A2CBFB346009FE363 /* Model */,
-				25DCF6392CBFB33F009FE363 /* View */,
-				25DCF6382CBFB337009FE363 /* ViewModel */,
 				2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */,
 				2517120D2CBE64B2005AB9E5 /* Assets.xcassets */,
 				251712122CBE64B2005AB9E5 /* Base.lproj */,
@@ -127,11 +118,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				25DCF6382CBFB337009FE363 /* ViewModel */,
-				25DCF6392CBFB33F009FE363 /* View */,
-				25DCF63A2CBFB346009FE363 /* Model */,
 			);
 			name = LoginTamplate;
 			productName = LoginTamplate;

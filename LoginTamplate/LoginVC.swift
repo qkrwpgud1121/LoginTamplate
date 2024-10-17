@@ -23,19 +23,6 @@ class LoginVC: UIViewController {
     override func loadView() {
         view = myFlexView
         
-        myFlexView.count.text = "\(count)"
-        myFlexView.plusButton.addTarget(self, action: #selector(plusCount(_:)), for: .touchUpInside)
-        myFlexView.subtractButton.addTarget(self, action: #selector(subtractCount(_:)), for: .touchUpInside)
-    }
-    
-    @objc func plusCount(_ sender: UIButton) {
-        count += 1
-        myFlexView.count.text = "\(count)"
-    }
-    
-    @objc func subtractCount(_ sender: UIButton) {
-        count -= 1
-        myFlexView.count.text = "\(count)"
     }
 }
 
