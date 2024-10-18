@@ -24,6 +24,7 @@ class LoginVC: UIViewController {
     override func loadView() {
         view = myFlexView
         
+        
     }
 }
 

@@ -39,6 +39,7 @@ class LoginFlexView: UIView {
         let label = UILabel()
         label.text = "or"
         label.font = UIFont.systemFont(ofSize: 19)
+        label.textAlignment = .center
         return label
     }()
     
@@ -48,15 +49,29 @@ class LoginFlexView: UIView {
         return label
     }()
     
+    private let sectorLabel2: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .lightGray
+        return label
+    }()
+    
     private let googleSignInButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Sign in with Google", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
-        button.backgroundColor = .white
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.blue.cgColor
-        button.layer.cornerRadius = 22
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        var attString = AttributedString("Sign in with Google")
+        attString.font = .systemFont(ofSize: 19)
+        
+        var config = UIButton.Configuration.bordered()
+        config.attributedTitle = attString
+        config.image = UIImage(named: "Google_logo")?.resize(to: .init(width: 20, height: 20))
+        config.imagePadding = 5
+        config.baseBackgroundColor = .blue
+        config.baseForegroundColor = .white
+        config.cornerStyle = .capsule
+        
+        button.configuration = config
+        
         return button
     }()
     
@@ -73,11 +88,21 @@ class LoginFlexView: UIView {
     
     private let kakaoSignInButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Sign in with Kakao", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
-        button.backgroundColor = .kakao
-        button.layer.cornerRadius = 22
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        var attString = AttributedString("Sign in with Kakao")
+        attString.font = .systemFont(ofSize: 19)
+        
+        var config = UIButton.Configuration.filled()
+        config.attributedTitle = attString
+        config.image = UIImage(named: "Kakao_logo")?.resize(to: CGSize(width: 20, height: 20))
+        config.imagePadding = 5
+        config.baseBackgroundColor = .kakao
+        config.baseForegroundColor = .kakaoBrown
+        config.cornerStyle = .capsule
+        
+        button.configuration = config
+        
         return button
     }()
     
@@ -94,12 +119,15 @@ class LoginFlexView: UIView {
             flex.addItem(password).marginTop(16).height(44)
             flex.addItem(loginButton).marginTop(16).height(44)
             
-            flex.addItem(orLabel).alignSelf(.center).margin(8).height(20)
+            flex.addItem().direction(.row).justifyContent(.spaceBetween).marginTop(16).define { sector in
+                sector.addItem(sectorLabel).grow(3).height(1).alignSelf(.center)
+                sector.addItem(orLabel).grow(1)
+                sector.addItem(sectorLabel2).grow(3).height(1).alignSelf(.center)
+            }
             
             flex.addItem(googleSignInButton).marginTop(16).height(44)
             flex.addItem(appleSignInButton).marginTop(16).height(44)
             flex.addItem(kakaoSignInButton).marginTop(16).height(44)
-            
             
         }
         
@@ -118,4 +146,15 @@ class LoginFlexView: UIView {
         rootFlexContainer.flex.layout(mode: .adjustHeight)
     }
     
+}
+
+extension UIImage {
+    func resize(to size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resizedImage ?? self
+    }
 }
