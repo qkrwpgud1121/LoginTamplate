@@ -66,8 +66,10 @@ class LoginFlexView: UIView {
         config.attributedTitle = attString
         config.image = UIImage(named: "Google_logo")?.resize(to: .init(width: 20, height: 20))
         config.imagePadding = 5
-        config.baseBackgroundColor = .blue
-        config.baseForegroundColor = .white
+        config.baseBackgroundColor = .white
+        config.baseForegroundColor = .blue
+        config.background.strokeWidth = 1
+        config.background.strokeColor = .blue
         config.cornerStyle = .capsule
         
         button.configuration = config
