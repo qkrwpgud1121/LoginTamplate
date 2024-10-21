@@ -5,14 +5,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.222742680027-g322acudchijl5019f4fg28p0lt5onvs</string>
+				<string>com.googleusercontent.apps.256993480612-mklhaj161nh6bk773iijpbnmbk560k7b</string>
 			</array>
 		</dict>
 	</array>
+	<key>GIDClientID</key>
+	<string>256993480612-mklhaj161nh6bk773iijpbnmbk560k7b.apps.googleusercontent.com</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -32,16 +32,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>GIDClientID</key>
-	<string>256993480612-mklhaj161nh6bk773iijpbnmbk560k7b.apps.googleusercontent.com</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>com.googleusercontent.apps.256993480612-mklhaj161nh6bk773iijpbnmbk560k7b</string>
-            </array>
-        </dict>
-    </array>
 </dict>
 </plist>

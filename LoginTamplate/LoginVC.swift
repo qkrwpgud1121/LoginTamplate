@@ -31,7 +31,6 @@ class LoginVC: UIViewController {
     }
     
     @objc func googleSignIn(_ sender: UIButton) {
-        print("googleSignIn")
         
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
             guard error == nil else { return }

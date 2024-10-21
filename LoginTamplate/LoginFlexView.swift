@@ -57,23 +57,14 @@ class LoginFlexView: UIView {
     
     let googleSignInButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        var attString = AttributedString("Sign in with Google")
-        attString.font = .systemFont(ofSize: 19)
-        
-        var config = UIButton.Configuration.bordered()
-        config.attributedTitle = attString
-        config.image = UIImage(named: "Google_logo")?.resize(to: .init(width: 20, height: 20))
-        config.imagePadding = 5
-        config.baseBackgroundColor = .white
-        config.baseForegroundColor = .blue
-        config.background.strokeWidth = 1
-        config.background.strokeColor = .blue
-        config.cornerStyle = .capsule
-        
-        button.configuration = config
-        
+        button.setTitle(" Sign in with Google", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.backgroundColor = .white
+        button.setImage(UIImage(named: "Google_logo")?.resize(to: .init(width: 20, height: 20)), for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.cornerRadius = 22
         return button
     }()
     
@@ -90,21 +81,12 @@ class LoginFlexView: UIView {
     
     let kakaoSignInButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        var attString = AttributedString("Sign in with Kakao")
-        attString.font = .systemFont(ofSize: 19)
-        
-        var config = UIButton.Configuration.filled()
-        config.attributedTitle = attString
-        config.image = UIImage(named: "Kakao_logo")?.resize(to: CGSize(width: 20, height: 20))
-        config.imagePadding = 5
-        config.baseBackgroundColor = .kakao
-        config.baseForegroundColor = .kakaoBrown
-        config.cornerStyle = .capsule
-        
-        button.configuration = config
-        
+        button.setTitle(" Sign in with Kakao", for: .normal)
+        button.setTitleColor(.kakaoBrown, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        button.backgroundColor = .kakao
+        button.setImage(UIImage(named: "Kakao_logo")?.resize(to: .init(width: 20, height: 20)), for: .normal)
+        button.layer.cornerRadius = 22
         return button
     }()
     

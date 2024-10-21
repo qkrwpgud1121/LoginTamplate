@@ -27,6 +27,7 @@
 		251712132CBE64B2005AB9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		251712142CBE64B2005AB9E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2517121D2CBE65F9005AB9E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		25D694652CC64DFD00FE0A3C /* LoginTamplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginTamplate.entitlements; sourceTree = "<group>"; };
 		4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.debug.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		251711F62CBE6117005AB9E5 /* LoginTamplate */ = {
 			isa = PBXGroup;
 			children = (
+				25D694652CC64DFD00FE0A3C /* LoginTamplate.entitlements */,
 				2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */,
 				2517120D2CBE64B2005AB9E5 /* Assets.xcassets */,
 				251712122CBE64B2005AB9E5 /* Base.lproj */,
@@ -255,9 +257,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = LoginTamplate/LoginTamplate.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 289G429944;
+				DEVELOPMENT_TEAM = AV4C82XPGK;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoginTamplate/Info.plist;
@@ -271,8 +275,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.LoginTamplate;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.LoginTamplate1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -287,9 +292,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = LoginTamplate/LoginTamplate.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 289G429944;
+				DEVELOPMENT_TEAM = AV4C82XPGK;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoginTamplate/Info.plist;
@@ -303,8 +310,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.LoginTamplate;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.LoginTamplate1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
