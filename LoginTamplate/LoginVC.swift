@@ -8,6 +8,7 @@
 import Foundation
 import FlexLayout
 import PinLayout
+import GoogleSignIn
 
 class LoginVC: UIViewController {
     
@@ -24,7 +25,31 @@ class LoginVC: UIViewController {
     override func loadView() {
         view = myFlexView
         
+        myFlexView.googleSignInButton.addTarget(self, action: #selector(googleSignIn(_:)), for: .touchUpInside)
+        myFlexView.appleSignInButton.addTarget(self, action: #selector(appleSignIn(_:)), for: .touchUpInside)
+        myFlexView.kakaoSignInButton.addTarget(self, action: #selector(kakaoSignIn(_:)), for: .touchUpInside)
+    }
+    
+    @objc func googleSignIn(_ sender: UIButton) {
+        print("googleSignIn")
         
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            guard error == nil else { return }
+            
+            let email = result?.user.profile?.email ?? ""
+            let name = result?.user.profile?.name ?? ""
+            
+            print("====> \(email)")
+            print("====> \(name)")
+        }
+    }
+    
+    @objc func appleSignIn(_ sender: UIButton) {
+        print("appleSignIn")
+    }
+    
+    @objc func kakaoSignIn(_ sender: UIButton) {
+        print("kakaoSignIn")
     }
 }
 

@@ -55,7 +55,7 @@ class LoginFlexView: UIView {
         return label
     }()
     
-    private let googleSignInButton: UIButton = {
+    let googleSignInButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -77,7 +77,7 @@ class LoginFlexView: UIView {
         return button
     }()
     
-    private let appleSignInButton: UIButton = {
+    let appleSignInButton: UIButton = {
         let button = UIButton()
         button.setTitle(" Sign in with Apple", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
@@ -88,7 +88,7 @@ class LoginFlexView: UIView {
         return button
     }()
     
-    private let kakaoSignInButton: UIButton = {
+    let kakaoSignInButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
