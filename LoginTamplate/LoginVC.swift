@@ -9,6 +9,7 @@ import Foundation
 import FlexLayout
 import PinLayout
 import GoogleSignIn
+import AuthenticationServices
 
 class LoginVC: UIViewController {
     
@@ -44,6 +45,15 @@ class LoginVC: UIViewController {
     }
     
     @objc func appleSignIn(_ sender: UIButton) {
+        
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self as? ASAuthorizationControllerDelegate
+        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
+        
         print("appleSignIn")
     }
     
@@ -52,5 +62,13 @@ class LoginVC: UIViewController {
     }
 }
 
-
+extension LoginVC: ASAuthorizationControllerDelegate {
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        if let credential = authorization.credential as? ASAuthorizationCredential {
+            
+        }
+    }
+}
 
