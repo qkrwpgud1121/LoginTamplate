@@ -10,6 +10,6 @@ target 'LoginTamplate' do
   pod 'FlexLayout'
   pod 'PinLayout'
   pod 'GoogleSignIn'
+  pod 'KakaoSDKUser'
 
 end
-222742680027-g322acudchijl5019f4fg28p0lt5onvs.apps.googleusercontent.com

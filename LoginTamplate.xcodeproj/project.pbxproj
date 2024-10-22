@@ -14,6 +14,7 @@
 		2517121A2CBE64B2005AB9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517120C2CBE64B2005AB9E5 /* AppDelegate.swift */; };
 		2517121C2CBE64B2005AB9E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251712142CBE64B2005AB9E5 /* SceneDelegate.swift */; };
 		2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517121D2CBE65F9005AB9E5 /* LoginVC.swift */; };
+		25DAAC7C2CC7969F00C5F484 /* KakaoSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DAAC7B2CC7969F00C5F484 /* KakaoSignIn.swift */; };
 		2BCCE5516A315AE3B527AB03 /* Pods_LoginTamplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		251712142CBE64B2005AB9E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2517121D2CBE65F9005AB9E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		25D694652CC64DFD00FE0A3C /* LoginTamplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginTamplate.entitlements; sourceTree = "<group>"; };
+		25DAAC7B2CC7969F00C5F484 /* KakaoSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignIn.swift; sourceTree = "<group>"; };
 		4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.debug.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				251712142CBE64B2005AB9E5 /* SceneDelegate.swift */,
 				2517121D2CBE65F9005AB9E5 /* LoginVC.swift */,
 				250E4F8F2CBFA3B900CDCC71 /* LoginFlexView.swift */,
+				25DAAC7B2CC7969F00C5F484 /* KakaoSignIn.swift */,
 			);
 			path = LoginTamplate;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DAAC7C2CC7969F00C5F484 /* KakaoSignIn.swift in Sources */,
 				2517121A2CBE64B2005AB9E5 /* AppDelegate.swift in Sources */,
 				2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */,
 				250E4F902CBFA3B900CDCC71 /* LoginFlexView.swift in Sources */,

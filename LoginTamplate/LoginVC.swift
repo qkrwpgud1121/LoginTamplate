@@ -10,6 +10,7 @@ import FlexLayout
 import PinLayout
 import GoogleSignIn
 import AuthenticationServices
+import KakaoSDKUser
 
 class LoginVC: UIViewController {
     
@@ -45,30 +46,23 @@ class LoginVC: UIViewController {
     }
     
     @objc func appleSignIn(_ sender: UIButton) {
-        
-        let request = ASAuthorizationAppleIDProvider().createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let controller = ASAuthorizationController(authorizationRequests: [request])
-        controller.delegate = self as? ASAuthorizationControllerDelegate
-        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
-        controller.performRequests()
-        
         print("appleSignIn")
     }
     
     @objc func kakaoSignIn(_ sender: UIButton) {
-        print("kakaoSignIn")
-    }
-}
-
-extension LoginVC: ASAuthorizationControllerDelegate {
-    
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         
-        if let credential = authorization.credential as? ASAuthorizationCredential {
-            
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk { oauthToken, error in
+                if let error = error {
+                    print("error: \(error)")
+                }
+            }
+        } else {
+            self.present(KakaoSignIn(), animated: true)
+            print("loginWithKakaoTalk() success")
         }
+        
+        print("kakaoSignIn")
     }
 }
 
