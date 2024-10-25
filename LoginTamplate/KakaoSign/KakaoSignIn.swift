@@ -16,16 +16,21 @@ class KakaoSignIn: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
     override func loadView() {
         view = kakaoFlexView
         
         kakaoFlexView.kakaoTalkLoginButton.addTarget(self, action: #selector(kakaoTalkLoginButtonTapped(_:)), for: .touchUpInside)
+        kakaoFlexView.cancelButton.addTarget(self, action: #selector(cancelButtonTapped(_:)), for: .touchUpInside)
     }
     
     @objc func kakaoTalkLoginButtonTapped(_ sender: UIButton) {
         print("kakaoTalk")
+    }
+    
+    @objc func cancelButtonTapped(_ sender: UIButton) {
+        print("cancel")
+        dismiss(animated: true)
     }
 }

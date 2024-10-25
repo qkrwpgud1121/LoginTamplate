@@ -56,6 +56,7 @@ class KakaoFlexView: UIView {
     let cancelButton: UIButton = {
         let button = UIButton()
         button.setTitle("취소", for: .normal)
+        button.backgroundColor = .black
         return button
     }()
     
@@ -63,10 +64,10 @@ class KakaoFlexView: UIView {
         super.init(frame: .zero)
         backgroundColor = .white
         
-        rootFlexContainer.flex.direction(.column).define { flex in
+        rootFlexContainer.flex.direction(.column).padding(16).define { flex in
             
             flex.addItem(hoduLogo).alignSelf(.center)
-            
+            flex.addItem(cancelButton).marginTop(16).height(44)
         }
         
         addSubview(rootFlexContainer)
