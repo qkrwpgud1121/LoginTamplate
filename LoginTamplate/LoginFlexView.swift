@@ -61,7 +61,7 @@ class LoginFlexView: UIView {
         button.setTitleColor(.systemBlue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 19)
         button.backgroundColor = .white
-        button.setImage(UIImage(named: "Google_logo")?.resize(to: .init(width: 20, height: 20)), for: .normal)
+        button.setImage(UIImage(named: "google_logo")?.resize(to: .init(width: 20, height: 20)), for: .normal)
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.systemBlue.cgColor
         button.layer.cornerRadius = 22

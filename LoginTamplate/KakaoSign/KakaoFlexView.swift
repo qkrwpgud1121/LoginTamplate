@@ -31,7 +31,7 @@ class KakaoFlexView: UIView {
     
     let label2: UILabel = {
         let label = UILabel()
-        label.text = "호두 앱을 계속 이용하려면 로그인이 필요합니다."
+        label.text = "로그인이 필요합니다."
         label.font = .systemFont(ofSize: .init(12))
         label.textColor = .black
         return label
@@ -61,9 +61,24 @@ class KakaoFlexView: UIView {
     
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
+        
+        rootFlexContainer.flex.direction(.column).define { flex in
+            
+            flex.addItem(hoduLogo).alignSelf(.center)
+            
+        }
+        
+        addSubview(rootFlexContainer)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        rootFlexContainer.pin.all(pin.safeArea)
+        rootFlexContainer.flex.layout(mode: .adjustHeight)
     }
 }
