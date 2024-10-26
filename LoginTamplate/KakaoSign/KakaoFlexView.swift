@@ -17,6 +17,7 @@ class KakaoFlexView: UIView {
     let hoduLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIApplication.shared.icon
+        imageView.layer.cornerRadius = 10
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -24,7 +25,7 @@ class KakaoFlexView: UIView {
     let loginLabel: UILabel = {
         let label = UILabel()
         label.text = "간편 로그인"
-        label.font = .systemFont(ofSize: .init(16))
+        label.font = .systemFont(ofSize: .init(19))
         label.textColor = .black
         return label
     }()
@@ -32,7 +33,7 @@ class KakaoFlexView: UIView {
     let label2: UILabel = {
         let label = UILabel()
         label.text = "로그인이 필요합니다."
-        label.font = .systemFont(ofSize: .init(12))
+        label.font = .systemFont(ofSize: .init(16))
         label.textColor = .black
         return label
     }()
@@ -42,6 +43,7 @@ class KakaoFlexView: UIView {
         button.setTitle("카카오톡으로 간편 로그인", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .kakao
+        button.layer.cornerRadius = 10
         return button
     }()
     
@@ -50,13 +52,14 @@ class KakaoFlexView: UIView {
         button.setTitle("다른 카카오계정으로 로그인", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .kakao
+        button.layer.cornerRadius = 10
         return button
     }()
     
     let cancelButton: UIButton = {
         let button = UIButton()
         button.setTitle("취소", for: .normal)
-        button.tintColor = .black
+        button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .white
         return button
     }()
@@ -65,15 +68,19 @@ class KakaoFlexView: UIView {
         super.init(frame: .zero)
         backgroundColor = .white
         
-        rootFlexContainer.flex.direction(.column).padding(16).define { flex in
+        rootFlexContainer.flex.direction(.column).alignItems(.center).padding(16).define { flex in
             
             flex.addItem(hoduLogo).alignSelf(.center)
+            flex.addItem(loginLabel).marginTop(16).height(44)
+            flex.addItem(label2).marginTop(16).height(44)
             
-            flex.direction(.column).marginTop(16).height(44).define { subFlex in
-                flex.addItem(loginLabel)
-                flex.addItem(label2)
-                flex.addItem(cancelButton)
+            flex.direction(.column).justifyContent(.center).define { buttonFlex in
+                buttonFlex.addItem(kakaoTalkLoginButton).height(60)
+                buttonFlex.addItem(kakaoDiferentLoginButton).marginTop(16).height(60)
             }
+            
+            flex.addItem(cancelButton).marginTop(16).height(44)
+            
             
         }
         
