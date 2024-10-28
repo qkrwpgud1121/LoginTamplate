@@ -53,7 +53,11 @@ class LoginVC: UIViewController {
     
     @objc func kakaoSignIn(_ sender: UIButton) {
         
-        self.present(KakaoSignIn(), animated: true)
+        let kakaoSignVC = KakaoSignIn()
+        kakaoSignVC.modalPresentationStyle = .overCurrentContext
+        kakaoSignVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(kakaoSignVC, animated: true)
         
         
 //        if (UserApi.isKakaoTalkLoginAvailable()) {

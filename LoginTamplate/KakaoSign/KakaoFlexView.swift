@@ -13,12 +13,12 @@ import PinLayout
 class KakaoFlexView: UIView {
     
     fileprivate let rootFlexContainer = UIView()
+    fileprivate let subView = UIView()
     
     let hoduLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIApplication.shared.icon
-        imageView.layer.cornerRadius = 10
-        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 20
         return imageView
     }()
     
@@ -66,13 +66,15 @@ class KakaoFlexView: UIView {
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = .white
+        backgroundColor = .black.withAlphaComponent(0.3)
         
-        rootFlexContainer.flex.direction(.column).alignItems(.center).padding(16).define { flex in
+        rootFlexContainer.backgroundColor = .white
+        
+        rootFlexContainer.flex.direction(.column).define { flex in
             
             flex.addItem(hoduLogo).alignSelf(.center)
             flex.addItem(loginLabel).marginTop(16).height(44)
-            flex.addItem(label2).marginTop(16).height(44)
+            flex.addItem(label2).marginTop(8).height(44)
             
             flex.direction(.column).justifyContent(.center).define { buttonFlex in
                 buttonFlex.addItem(kakaoTalkLoginButton).height(60)
@@ -80,7 +82,6 @@ class KakaoFlexView: UIView {
             }
             
             flex.addItem(cancelButton).marginTop(16).height(44)
-            
             
         }
         
@@ -93,7 +94,7 @@ class KakaoFlexView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        rootFlexContainer.pin.all(pin.safeArea)
-        rootFlexContainer.flex.layout(mode: .adjustHeight)
+        rootFlexContainer.pin.horizontally(16)
+        rootFlexContainer.flex.layout()
     }
 }
