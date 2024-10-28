@@ -26,6 +26,7 @@ class KakaoFlexView: UIView {
         let label = UILabel()
         label.text = "간편 로그인"
         label.font = .systemFont(ofSize: .init(19))
+        label.textAlignment = .center
         label.textColor = .black
         return label
     }()
@@ -34,6 +35,7 @@ class KakaoFlexView: UIView {
         let label = UILabel()
         label.text = "로그인이 필요합니다."
         label.font = .systemFont(ofSize: .init(16))
+        label.textAlignment = .center
         label.textColor = .black
         return label
     }()
@@ -69,6 +71,7 @@ class KakaoFlexView: UIView {
         backgroundColor = .black.withAlphaComponent(0.3)
         
         rootFlexContainer.backgroundColor = .white
+        rootFlexContainer.layer.cornerRadius = 10
         
         rootFlexContainer.flex.direction(.column).define { flex in
             
@@ -94,7 +97,11 @@ class KakaoFlexView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        rootFlexContainer.pin.horizontally(16)
+        rootFlexContainer.pin
+            .vCenter()
+            .hCenter()
+            .height(500)
+            .width(311)
         rootFlexContainer.flex.layout()
     }
 }
