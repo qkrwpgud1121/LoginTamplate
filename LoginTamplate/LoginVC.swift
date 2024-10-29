@@ -58,20 +58,6 @@ class LoginVC: UIViewController {
         kakaoSignVC.modalTransitionStyle = .crossDissolve
         
         self.present(kakaoSignVC, animated: true)
-        
-        
-//        if (UserApi.isKakaoTalkLoginAvailable()) {
-//            UserApi.shared.loginWithKakaoTalk { oauthToken, error in
-//                if let error = error {
-//                    print("error: \(error)")
-//                }
-//            }
-//        } else {
-//            self.present(KakaoSignIn(), animated: true)
-//            print("loginWithKakaoTalk() success")
-//        }
-        
-        print("kakaoSignIn")
     }
 }
 

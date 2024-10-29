@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,10 @@
 		251712172CBE64B2005AB9E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2517120F2CBE64B2005AB9E5 /* LaunchScreen.storyboard */; };
 		251712192CBE64B2005AB9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2517120D2CBE64B2005AB9E5 /* Assets.xcassets */; };
 		2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517121D2CBE65F9005AB9E5 /* LoginVC.swift */; };
+		25249D3B2CD0D18600448DC9 /* KakaoFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25249D392CD0D18600448DC9 /* KakaoFlexView.swift */; };
+		25249D3C2CD0D18600448DC9 /* KakaoSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25249D3A2CD0D18600448DC9 /* KakaoSignIn.swift */; };
+		25249D3F2CD0D19F00448DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25249D3D2CD0D19F00448DC9 /* AppDelegate.swift */; };
+		25249D402CD0D19F00448DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25249D3E2CD0D19F00448DC9 /* SceneDelegate.swift */; };
 		2BCCE5516A315AE3B527AB03 /* Pods_LoginTamplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,16 +27,15 @@
 		251712102CBE64B2005AB9E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		251712132CBE64B2005AB9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2517121D2CBE65F9005AB9E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		25249D392CD0D18600448DC9 /* KakaoFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoFlexView.swift; sourceTree = "<group>"; };
+		25249D3A2CD0D18600448DC9 /* KakaoSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignIn.swift; sourceTree = "<group>"; };
+		25249D3D2CD0D19F00448DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25249D3E2CD0D19F00448DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25D694652CC64DFD00FE0A3C /* LoginTamplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginTamplate.entitlements; sourceTree = "<group>"; };
 		4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.debug.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F8A7A1DF2CCBD08C003D13FD /* Delegate */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Delegate; sourceTree = "<group>"; };
-		F8A7A1E12CCBD0AA003D13FD /* KakaoSign */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = KakaoSign; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		251711F12CBE6117005AB9E5 /* Frameworks */ = {
@@ -97,6 +100,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F8A7A1DF2CCBD08C003D13FD /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				25249D3D2CD0D19F00448DC9 /* AppDelegate.swift */,
+				25249D3E2CD0D19F00448DC9 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		F8A7A1E12CCBD0AA003D13FD /* KakaoSign */ = {
+			isa = PBXGroup;
+			children = (
+				25249D392CD0D18600448DC9 /* KakaoFlexView.swift */,
+				25249D3A2CD0D18600448DC9 /* KakaoSignIn.swift */,
+			);
+			path = KakaoSign;
+			sourceTree = "<group>";
+		};
 		F909E14A6F3606EC03D1612C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,14 +138,11 @@
 				251711F12CBE6117005AB9E5 /* Frameworks */,
 				251711F22CBE6117005AB9E5 /* Resources */,
 				3C20FB537D34F3A91EDEAA60 /* [CP] Embed Pods Frameworks */,
+				DE6B0E2D96FB90BC5F2DC9B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F8A7A1DF2CCBD08C003D13FD /* Delegate */,
-				F8A7A1E12CCBD0AA003D13FD /* KakaoSign */,
 			);
 			name = LoginTamplate;
 			productName = LoginTamplate;
@@ -196,6 +214,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DE6B0E2D96FB90BC5F2DC9B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD6891FFE4C8F30A1D068402 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +262,10 @@
 			files = (
 				2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */,
 				250E4F902CBFA3B900CDCC71 /* LoginFlexView.swift in Sources */,
+				25249D3F2CD0D19F00448DC9 /* AppDelegate.swift in Sources */,
+				25249D402CD0D19F00448DC9 /* SceneDelegate.swift in Sources */,
+				25249D3B2CD0D18600448DC9 /* KakaoFlexView.swift in Sources */,
+				25249D3C2CD0D18600448DC9 /* KakaoSignIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

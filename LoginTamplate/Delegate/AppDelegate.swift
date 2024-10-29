@@ -7,13 +7,14 @@
 
 import UIKit
 import GoogleSignIn
-import KakaoSDKAuth
+import KakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        KakaoSDK.initSDK(appKey: "4fe994bbfa0985fd7bda31678d918039")
         return true
     }
     
@@ -33,12 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        if(AuthApi.isKakaoTalkLoginUrl(url)) {
-            return AuthController.handleOpenUrl(url: url)
-        } else {
-            return GIDSignIn.sharedInstance.handle(url)
-        }
-        
+        return GIDSignIn.sharedInstance.handle(url)
     }
     
 }

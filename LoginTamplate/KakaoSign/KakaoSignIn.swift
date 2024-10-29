@@ -8,6 +8,7 @@
 import Foundation
 import FlexLayout
 import PinLayout
+import KakaoSDKUser
 
 class KakaoSignIn: UIViewController {
     
@@ -27,15 +28,41 @@ class KakaoSignIn: UIViewController {
     }
     
     @objc func kakaoTalkLoginButtonTapped(_ sender: UIButton) {
-        print("kakaoTalk")
+        
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk { oauthToken, error in
+                if let error = error {
+                    print(error)
+                } else {
+                    print("loginWithKakaoTalk() success.")
+                    _ = oauthToken
+                    
+                    let userToken = oauthToken?.accessToken
+                    
+                    print("====> token: \(userToken)")
+                    
+                }
+            }
+        }
     }
     
     @objc func kakaoAccountLoginButtonTapped(_ sender: UIButton) {
-        print("kakaoAccount")
+        
+        UserApi.shared.loginWithKakaoAccount { oauthToken, error in
+            if let error = error {
+                print(error)
+            } else {
+                print("loginWithKakaoAccount() success.")
+                _ = oauthToken
+                
+                let userToken = oauthToken?.accessToken
+                
+                print("====> token: \(userToken)")
+            }
+        }
     }
     
     @objc func cancelButtonTapped(_ sender: UIButton) {
-        print("cancel")
         dismiss(animated: true)
     }
 }

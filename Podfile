@@ -10,6 +10,6 @@ target 'LoginTamplate' do
   pod 'FlexLayout'
   pod 'PinLayout'
   pod 'GoogleSignIn'
-  pod 'KakaoSDKUser'
+  pod 'KakaoSDK'
 
 end

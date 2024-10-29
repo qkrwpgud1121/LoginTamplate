@@ -10,6 +10,14 @@
 				<string>com.googleusercontent.apps.256993480612-mklhaj161nh6bk773iijpbnmbk560k7b</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao4fe994bbfa0985fd7bda31678d918039</string>
+			</array>
+		</dict>
 	</array>
 	<key>GIDClientID</key>
 	<string>256993480612-mklhaj161nh6bk773iijpbnmbk560k7b.apps.googleusercontent.com</string>
@@ -32,5 +40,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakaokompassauth</string>
+	</array>
 </dict>
 </plist>
