@@ -13,7 +13,6 @@
 		251712192CBE64B2005AB9E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2517120D2CBE64B2005AB9E5 /* Assets.xcassets */; };
 		2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517121D2CBE65F9005AB9E5 /* LoginVC.swift */; };
 		2BCCE5516A315AE3B527AB03 /* Pods_LoginTamplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */; };
-		F8A7A1E32CCBD3DF003D13FD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A7A1E22CCBD3DF003D13FD /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		4525A82B2DA73443105CACAF /* Pods-LoginTamplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.debug.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.debug.xcconfig"; sourceTree = "<group>"; };
 		6EE0A4D7630046AA9ABE24C3 /* Pods_LoginTamplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTamplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A657E3C075A50E0AA1253BFA /* Pods-LoginTamplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTamplate.release.xcconfig"; path = "Target Support Files/Pods-LoginTamplate/Pods-LoginTamplate.release.xcconfig"; sourceTree = "<group>"; };
-		F8A7A1E22CCBD3DF003D13FD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -77,7 +75,6 @@
 				251712132CBE64B2005AB9E5 /* Info.plist */,
 				2517121D2CBE65F9005AB9E5 /* LoginVC.swift */,
 				250E4F8F2CBFA3B900CDCC71 /* LoginFlexView.swift */,
-				F8A7A1E22CCBD3DF003D13FD /* SignInView.swift */,
 			);
 			path = LoginTamplate;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A7A1E32CCBD3DF003D13FD /* SignInView.swift in Sources */,
 				2517121E2CBE65F9005AB9E5 /* LoginVC.swift in Sources */,
 				250E4F902CBFA3B900CDCC71 /* LoginFlexView.swift in Sources */,
 			);

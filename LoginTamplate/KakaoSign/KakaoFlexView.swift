@@ -18,6 +18,7 @@ class KakaoFlexView: UIView {
     let hoduLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIApplication.shared.icon
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 20
         return imageView
     }()
@@ -40,13 +41,39 @@ class KakaoFlexView: UIView {
         return label
     }()
     
+    let kakaoTalkLogo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Kakao_logo")?.resize(to: .init(width: 20, height: 20))
+        imageView.contentMode = .center
+        return imageView
+    }()
+    
+    let kakaoTalkDivLable1: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .black.withAlphaComponent(0.2)
+        label.layer.cornerRadius = 0.5
+        return label
+    }()
+    
     let kakaoTalkLoginButton: UIButton = {
         let button = UIButton()
         button.setTitle("카카오톡으로 간편 로그인", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .kakao
-        button.layer.cornerRadius = 10
         return button
+    }()
+    
+    let kakaoAccountLogo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "kakao_Account")?.resize(to: .init(width: 20, height: 20))
+        imageView.contentMode = .center
+        return imageView
+    }()
+    
+    let kakaoTalkDivLable2: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .black.withAlphaComponent(0.2)
+        label.layer.cornerRadius = 0.5
+        return label
     }()
     
     let kakaoDiferentLoginButton: UIButton = {
@@ -73,18 +100,35 @@ class KakaoFlexView: UIView {
         rootFlexContainer.backgroundColor = .white
         rootFlexContainer.layer.cornerRadius = 10
         
-        rootFlexContainer.flex.direction(.column).define { flex in
+        rootFlexContainer.flex.direction(.column).justifyContent(.spaceAround).define { flex in
             
-            flex.addItem(hoduLogo).alignSelf(.center)
-            flex.addItem(loginLabel).marginTop(16).height(44)
-            flex.addItem(label2).marginTop(8).height(44)
-            
-            flex.direction(.column).justifyContent(.center).define { buttonFlex in
-                buttonFlex.addItem(kakaoTalkLoginButton).height(60)
-                buttonFlex.addItem(kakaoDiferentLoginButton).marginTop(16).height(60)
+            flex.addItem().direction(.column).alignItems(.center).define { flex in
+                
+                flex.addItem(hoduLogo).cornerRadius(10)
+                flex.addItem(loginLabel).marginTop(16)
+                flex.addItem(label2).marginTop(16)
             }
             
-            flex.addItem(cancelButton).marginTop(16).height(44)
+            flex.addItem().direction(.column).margin(16).define { flex in
+                
+                flex.addItem().direction(.row).alignItems(.center).backgroundColor(.kakao).cornerRadius(10).define { flex in
+                    
+                    flex.addItem(kakaoTalkLogo).width(60)
+                    flex.addItem(kakaoTalkDivLable1).height(30).width(1)
+                    flex.addItem(kakaoTalkLoginButton).marginLeft(10).height(60)
+                }
+                
+                flex.addItem().direction(.row).alignItems(.center).backgroundColor(.kakao).marginTop(16).cornerRadius(10).define { flex in
+                    
+                    flex.addItem(kakaoAccountLogo).width(60)
+                    flex.addItem(kakaoTalkDivLable2).height(30).width(1)
+                    flex.addItem(kakaoDiferentLoginButton).marginLeft(10).height(60)
+                }
+            }
+            
+            flex.addItem().direction(.column).define { flex in
+                flex.addItem(cancelButton)
+            }
             
         }
         
