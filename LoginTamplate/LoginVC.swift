@@ -48,6 +48,16 @@ class LoginVC: UIViewController {
     }
     
     @objc func appleSignIn(_ sender: UIButton) {
+        
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.email, .fullName]
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+        
         print("appleSignIn")
     }
     
@@ -58,6 +68,42 @@ class LoginVC: UIViewController {
         kakaoSignVC.modalTransitionStyle = .crossDissolve
         
         self.present(kakaoSignVC, animated: true)
+    }
+}
+
+extension LoginVC: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        switch authorization.credential {
+        case let appleIdCreential as ASAuthorizationAppleIDCredential:
+            
+            let userIdentifier = appleIdCreential.user
+            let fullName = appleIdCreential.fullName
+            let email = appleIdCreential.email
+            
+            print("User Identifier: \(userIdentifier)")
+            print("Full Name: \(String(describing: fullName))")
+            print("Email: \(email ?? "")")
+            
+        case let passwordCredential as ASPasswordCredential:
+            
+            let userName = passwordCredential.user
+            let password = passwordCredential.password
+            
+            print("User Name: \(userName)")
+            print("Password: \(password)")
+        default:
+            break
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: any Error) {
+        print("login failed - \(error.localizedDescription)")
     }
 }
 
