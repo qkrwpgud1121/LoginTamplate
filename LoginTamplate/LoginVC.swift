@@ -43,7 +43,6 @@ class LoginVC: UIViewController {
             print("====> \(email)")
             print("====> \(name)")
             
-            //self.present(SignInView(), animated: true)
         }
     }
     
